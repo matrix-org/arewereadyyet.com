@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Synapse 1.0 Federation</title>
+  <title>Matrix 1.0-ready Federation</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Synapse 1.0 Federation</a>
+      <a class="navbar-brand" href="#">Matrix 1.0-ready Federation</a>
     </div>
   </nav>
 
@@ -28,12 +28,17 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="mt-5">Synapse 1.0 Federation</h1>
+        <h1 class="mt-5">Matrix 1.0-ready Federation</h1>
         <div id="svg-dial"></div>
         <p>
-            Of <span class="font-weight-bold font-italic">3420</span> currently federating servers, we can see that <span class="font-weight-bold font-italic">1300</span> are using valid, non-self-signed certificates.
+            Of all servers visible from matrix.org, this is the percentage which have correct valid TLS certificates. As of Matrix 1.0, Matrix will not federate with Homeservers using self-signed certificates.
         </p>
-        <p>Last Updated <span class="font-italic">2019-02-23T17:59:01.610Z</span></p>
+        <p>
+          Note that it's not necessary for this number to reach 100% before the launch of Matrix 1.0, but  after that time, any servers which do not have valid certificates will not be able to federate.
+        </p>
+        <p>
+          Last Updated <span class="font-italic">2019-02-23T17:59:01.610Z</span>
+        </p>
       </div>
     </div>
   </div>
