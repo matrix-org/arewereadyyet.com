@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Synapse 1.0 Federation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Synapse 1.0 Federation</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Synapse 1.0 Federation</h1>
+        <div id="svg-dial"></div>
+        <p>
+            Of <span class="font-weight-bold font-italic">3420</span> currently federating servers, we can see that <span class="font-weight-bold font-italic">1300</span> are using valid, non-self-signed certificates.
+        </p>
+        <p>Last Updated <span class="font-italic">2019-02-23T17:59:01.610Z</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+  <script type="text/javascript" src="svg-dial.min.js"></script>
+  <script type="text/javascript">
+    // // globals
+    var dial = new SVGDial('#svg-dial', {
+      ringBackgroundColor: ['#f44', '#84c535'],
+      frameBackgroundColor: 'white',
+      frameSize: 360,
+      ringWidth: 35,
+      fontSize: 100,
+      //disabled: true
+    });
+    dial.setValue(0.3801169591);
+    dial.config({disabled: true});
+  </script>
+</body>
+
+</html>
