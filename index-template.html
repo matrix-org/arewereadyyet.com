@@ -12,23 +12,21 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      color: rgb(102, 102, 102);
+    }
+  </style>
 
 </head>
 
 <body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Matrix 1.0-ready Federation</a>
-    </div>
-  </nav>
-
   <!-- Page Content -->
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="mt-5">Matrix 1.0-ready Federation</h1>
+        <img class="mt-3" style="width: 180px;" src="https://matrix.org/blog/wp-content/uploads/2015/01/logo1.png" />
+        <h3>Matrix 1.0-ready Federation</h3>
         <div id="svg-dial"></div>
         <p>
             Of all servers visible from matrix.org, this is the percentage which have correct valid TLS certificates. As of Matrix 1.0, Matrix will not federate with Homeservers using self-signed certificates.
@@ -66,10 +64,15 @@
     });
     dial.setValue(%%PERCENT%%);
     dial.config({disabled: true});
-    
+
     $(document).ready(function() {
       $("#btnCheck").click(function() {
         window.location = "https://matrix.org/federationtester/#" + $("#txtHostname").val();
+      });
+      $("#txtHostname").bind('keypress', function(e) {
+          if (e.keyCode === 13){
+            $("#btnCheck").click();
+          }
       });
     });
   </script>
