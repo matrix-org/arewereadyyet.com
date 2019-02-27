@@ -24,23 +24,27 @@
   <!-- Page Content -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center">
-        <img class="mt-3" style="width: 180px;" src="https://matrix.org/blog/wp-content/uploads/2015/01/logo1.png" />
-        <h3>Matrix 1.0-ready Federation</h3>
-        <div id="svg-dial"></div>
-        <p>
-            Of all servers visible from matrix.org, this is the percentage which have correct valid TLS certificates. As of Matrix 1.0, Matrix will not federate with Homeservers using self-signed certificates.
-        </p>
-        <p>
-          <input type="text" id="txtHostname" />
-          <button id="btnCheck">Check My Server!</button>
-        </p>
-        <p>
-          Note that it's not necessary for this number to reach 100% before the launch of Matrix 1.0, but  after that time, any servers which do not have valid certificates will not be able to federate.
-        </p>
-        <p>
-          Last Updated <span class="font-italic">2019-02-26T16:01:17.523Z</span>
-        </p>
+      <div class="col-lg-12">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <img class="mt-3" style="width: 180px;" src="https://matrix.org/blog/wp-content/uploads/2015/01/logo1.png" />
+            <h3>Matrix 1.0-ready Federation</h3>
+            <div id="svg-dial"></div>
+            <p>
+                Of all servers visible from matrix.org, this is the percentage which have correct valid TLS certificates. As of Matrix 1.0, Matrix will not federate with Homeservers using self-signed certificates.
+            </p>
+            <p>
+              <input type="text" id="txtHostname" />
+              <button id="btnCheck">Check My Server!</button>
+            </p>
+            <p>
+              Note that it's not necessary for this number to reach 100% before the launch of Matrix 1.0, but  after that time, any servers which do not have valid certificates will not be able to federate.
+            </p>
+            <p>
+              Last Updated <span class="font-italic">2019-02-26T16:01:17.523Z</span>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -62,7 +66,7 @@
       fontSize: 100,
       //disabled: true
     });
-    dial.setValue(0.1488776912505726);
+    dial.setValue(0.38);
     dial.config({disabled: true});
 
     $(document).ready(function() {
