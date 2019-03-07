@@ -30,15 +30,18 @@
             <img class="mt-3" style="width: 180px;" src="https://matrix.org/blog/wp-content/uploads/2015/01/logo1.png" />
             <h3>Matrix 1.0-ready Federation</h3>
             <div id="svg-dial"></div>
+            <p class="small">
+              Of all servers visible from matrix.org, this is the percentage which have correct valid TLS certificates.
+            </p>
             <p>
-                Of all servers visible from matrix.org, this is the percentage which have correct valid TLS certificates. As of Matrix 1.0, Matrix will not federate with Homeservers using self-signed certificates.
+              Synapse 1.0 will support only the r0 release of the <a href="https://matrix.org/docs/spec/server_server/r0.1.1.html">Server to Server spec</a> as used in the upcoming Matrix 1.0 standard. As a result it will not federate with Homeservers using self-signed certificates. It is essential that all homeserver admins configure their certificate prior to the release! For more information and a guide to configuring your certificates, take a look at our <a href="https://github.com/matrix-org/synapse/blob/master/docs/MSC1711_certificates_FAQ.md">handy guide</a>. 
             </p>
             <p>
               <input type="text" id="txtHostname" />
               <button id="btnCheck">Check My Server!</button>
             </p>
             <p>
-              Note that it's not necessary for this number to reach 100% before the launch of Matrix 1.0, but  after that time, any servers which do not have valid certificates will not be able to federate.
+              We expect to launch Synapse 1.0 in March. We do not have a hard date because it depends on how fast people upgrade! Note that it's not necessary for this number to reach 100% before the launch of Synapse 1.0, but after that time, any servers which do not have valid certificates will not be able to federate.
             </p>
             <p>
               Last Updated <span class="font-italic">%%UPDATED%%</span>
