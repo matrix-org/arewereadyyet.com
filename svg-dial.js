@@ -248,7 +248,7 @@
 
     updateText: function(percentage) {
       this.text.attr({
-        text: [Math.round(percentage * 100),'%'].join('')
+        text: [(percentage.toFixed(3) * 100),'%'].join('')
       });
     },
 
