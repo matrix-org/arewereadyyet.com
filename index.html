@@ -16,6 +16,11 @@
     body {
       color: rgb(102, 102, 102);
     }
+    @import url('https://rsms.me/inter/inter.css');
+    html { font-family: 'Inter', sans-serif; }
+    @supports (font-variation-settings: normal) {
+      html { font-family: 'Inter var', sans-serif; }
+    }
   </style>
 
 
@@ -35,6 +40,13 @@
 </script>
 <!-- End Matomo Code -->
 
+<!-- twitter -->
+<meta name="twitter:card" value="summary_large_image" />
+<meta name="twitter:url" value="https://www.arewereadyyet.com/" />
+<meta name="twitter:title" value="Matrix 1.0-ready Federation" />
+<meta name="twitter:description" value="" />
+<meta name="twitter:image" value="https://www.arewereadyyet.com/dial-image.png" />
+<meta name="twitter:site" value="@matrixdotorg" />
 
 </head>
 
@@ -55,14 +67,14 @@
               Synapse 1.0 will support only the r0 release of the <a target="_blank" href="https://matrix.org/docs/spec/server_server/r0.1.1.html">Server to Server spec</a> as used in the upcoming Matrix 1.0 standard. As a result it will not federate with Homeservers using self-signed certificates. It is essential that all homeserver admins configure their certificate prior to the release! For more information and a guide to configuring your certificates, take a look at our <a target="_blank" href="https://github.com/matrix-org/synapse/blob/master/docs/MSC1711_certificates_FAQ.md">handy guide</a>.
             </p>
             <div class="input-group input-group-lg">
-              <input class="input-group-text w-75" type="text" id="txtHostname" />
+              <input class="input-group-text w-75" type="text" placeholder="server_name of homeserver" id="txtHostname" />
               <button class="btn btn-primary ml-2" id="btnCheck">Check My Server!</button>
             </div>
             <p class="my-4">
               We expect to launch Synapse 1.0 in March. We do not have a hard date because it depends on how fast people upgrade! Note that it's not necessary for this number to reach 100% before the launch of Synapse 1.0, but after that time, any servers which do not have valid certificates will not be able to federate.
             </p>
             <p>
-              Last Updated <span class="font-italic">2019-03-08T16:55:47.192Z</span>
+              Last Updated <span class="font-italic">2019-03-19T15:30:31.886Z</span>
             </p>
           </div>
         </div>
@@ -87,7 +99,7 @@
       fontSize: 100,
       //disabled: true
     });
-    dial.setValue(0.5049728752260397);
+    dial.setValue(0.5848294434470377);
     dial.config({disabled: true});
 
     $(document).ready(function() {
