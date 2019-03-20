@@ -67,7 +67,7 @@
       frameBackgroundColor: 'white',
       ringBackgroundColor: '#888',
       innerBackgroundColor: 'white',
-      fontFamily: 'impact',
+      fontFamily: "'Chivo', sans-serif",
       fontSize: 24,
       fontStyle: 'none',
       fontWeight: 'none'
