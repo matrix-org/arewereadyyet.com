@@ -67,7 +67,7 @@
       frameBackgroundColor: 'white',
       ringBackgroundColor: '#888',
       innerBackgroundColor: 'white',
-      fontFamily: 'Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif',
+      fontFamily: "'Chivo', sans-serif",
       fontSize: 24,
       fontStyle: 'none',
       fontWeight: 'none'
