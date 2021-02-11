@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Matrix 1.0-ready Federation</title>
+  <title>Dendrite Spec Compliance</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -56,25 +56,30 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
+          <div class="col-lg-12 text-center">
             <img class="my-4" style="width: 180px;" src="https://matrix.org/blog/wp-content/uploads/2015/01/logo1.png" />
-            <h3 class="my-4">Matrix 1.0-ready Federation</h3>
-            <div id="svg-dial"></div>
-            <p class="small my-4">
-              Of all servers visible from matrix.org, this is the percentage which have correct valid TLS certificates.
-            </p>
-            <p class="my-4">
-              Synapse 1.0 will support only the r0 release of the <a target="_blank" href="https://matrix.org/docs/spec/server_server/r0.1.1.html">Server to Server spec</a> as used in the upcoming Matrix 1.0 standard. As a result it will not federate with Homeservers using self-signed certificates. It is essential that all homeserver admins configure their certificate prior to the release! For more information and a guide to configuring your certificates, take a look at our <a target="_blank" href="https://github.com/matrix-org/synapse/blob/master/docs/MSC1711_certificates_FAQ.md">handy guide</a>.
-            </p>
-            <div class="input-group input-group-lg">
-              <input class="input-group-text w-75" type="text" placeholder="server_name of homeserver" id="txtHostname" />
-              <button class="btn btn-primary ml-2" id="btnCheck">Check My Server!</button>
+            <h2 class="my-4"><a href="https://github.com/matrix-org/dendrite">Dendrite</a> Spec Compliance</h2>
+            
+            <div class="col-lg-6" style="float:left">
+              <div id="svg-cs-dial"></div>
+              <h4 class="mb-4">
+                Client-Server APIs
+              </h4>
             </div>
+            
+            <div class="col-lg-6" style="float:right">
+              <div id="svg-ss-dial"></div>
+              <h4 class="mb-4">
+                Server-Server APIs
+              </h4>
+            </div>
+            
             <p class="my-4">
-              We expect to launch Synapse 1.0 in April. We do not have a hard date because it depends on how fast people upgrade! Note that it's not necessary for this number to reach 100% before the launch of Synapse 1.0, but after that time, any servers which do not have valid certificates will not be able to federate.
+              Learn more about the features that Dendrite has in its <a href="https://github.com/matrix-org/dendrite#progress">README</a>.
             </p>
+
             <p>
-              Last Updated <span class="font-italic">2019-03-19T15:30:31.886Z</span>
+              Last Updated <a href="https://matrix.org/blog/2021/01/22/this-week-in-matrix-2021-01-22#dendrite--gomatrixserverlib" class="font-italic">2021-01-22</a>
             </p>
           </div>
         </div>
@@ -91,7 +96,7 @@
   <script type="text/javascript" src="svg-dial.js"></script>
   <script type="text/javascript">
     // // globals
-    var dial = new SVGDial('#svg-dial', {
+    var dial = new SVGDial('#svg-cs-dial', {
       ringBackgroundColor: ['#f44', '#84c535'],
       frameBackgroundColor: 'white',
       frameSize: 360,
@@ -99,19 +104,19 @@
       fontSize: 100,
       //disabled: true
     });
-    dial.setValue(0.5848294434470377);
+    dial.setValue(0.60);
     dial.config({disabled: true});
 
-    $(document).ready(function() {
-      $("#btnCheck").click(function() {
-        window.location = "https://matrix.org/federationtester/#" + $("#txtHostname").val();
-      });
-      $("#txtHostname").bind('keypress', function(e) {
-          if (e.keyCode === 13){
-            $("#btnCheck").click();
-          }
-      });
+    var usersDial = new SVGDial('#svg-ss-dial', {
+      ringBackgroundColor: ['#f44', '#84c535'],
+      frameBackgroundColor: 'white',
+      frameSize: 360,
+      ringWidth: 35,
+      fontSize: 100,
+      //disabled: true
     });
+    usersDial.setValue(0.83);
+    usersDial.config({disabled: true});
   </script>
 </body>
 
